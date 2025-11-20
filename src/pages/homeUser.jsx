@@ -1,8 +1,8 @@
 import { Container, Row } from 'react-bootstrap';
 import  ProyectCard from '../components/organism/ProyectCard.jsx';
-import Producto from '../Data/Producto.js';
-import '../styles/pages/card.css'
-import '../styles/pages/HomeUser.css'
+import Producto from '../data/Producto.js';
+import '../styles/card.css'
+import '../styles/HomeUser.css'
 
 
 function HomeUser() {
@@ -23,7 +23,7 @@ function HomeUser() {
     <div className='fon'>
       <Container className='pro'>
         <div>
-          <h2 className='subt'>productoss</h2>
+          <h2 className='subt'>productos</h2>
           <div className='spice'>
             {Array.isArray(Producto) && Productos.map((item) => (<ProyectCard key={item.id}
             proyect={item} />

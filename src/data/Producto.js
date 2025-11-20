@@ -1,4 +1,4 @@
-const poducto =[
+const producto =[
 {
     id: 1,
     name : "poster1",
