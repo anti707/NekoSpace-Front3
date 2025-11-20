@@ -10,11 +10,10 @@ function HomeUser() {
   <>
   <div className='fondo'>
    <Container className="welcome">
-    <img className='image' src={gato} alt="facereveal" />
-     <h1 className='titulo'>Antonia Tapia</h1>
+     <h1 className='titulo'>NekoSpace</h1>
      <p className='sub'>(˶o⩊o˶)</p>
-     <p className='sub'>estudio informatica y amo los gatos</p>
-     <p className='sub'> ₍^. .^₎⟆ mi mayor pasion es el terror y todo lo que tenga que ver con el mundo obscuro ₍^. .^₎⟆ </p> 
+     <p className='sub'>¡¡un espacio creado para ti¡¡</p>
+     <p className='sub'>donde encontraras todo lo que nececitas o no creias nececitar</p>
      <p className='sub'>⏔⏔⏔ ꒰ ᧔ෆ᧓ ꒱ ⏔⏔⏔ </p>
    </Container>
 
@@ -25,7 +24,20 @@ function HomeUser() {
         <div>
           <h2 className='subt'>productos</h2>
           <div className='spice'>
-            {Array.isArray(Producto) && Productos.map((item) => (<ProyectCard key={item.id}
+            {Array.isArray(Producto) && Producto.map((item) => (<ProyectCard key={item.id}
+            proyect={item} />
+            ))}
+          </div>
+        </div> 
+      </Container>
+    </div>
+
+    <div className='fon'>
+      <Container className='pro'>
+        <div>
+          <h2 className='subt'>productos</h2>
+          <div className='spice'>
+            {Array.isArray(Producto) && Producto.map((item) => (<ProyectCard key={item.id}
             proyect={item} />
             ))}
           </div>

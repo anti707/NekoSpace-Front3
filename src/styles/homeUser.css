@@ -1,35 +1,36 @@
 .fondo{
-    background-image: url('../../assets/images/halloween.webp');
     background-size: contain;
     background-attachment: fixed;
-    align-items: center;
+    align-items: end;
     max-width: 100%;
     width: 100%;
     flex-wrap: wrap !important;
 }
 .fon{
-    background-color: rgb(204, 186, 235);
-    padding: 90px;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
     flex-wrap: wrap !important;
 }
 
 .titulo{
-    text-align: center;
+    text-align: justify;
     font-family: cursive;
     flex-wrap: wrap !important;
+    color: rgb(0, 0, 0);
 }
 .text{
-    text-align: center;
+    text-align: justify;
     padding: 70px;
     font-family: cursive;
-    flex-wrap: wrap !important;
+    flex-wrap: wrap !important;color: rgb(0, 0, 0);
 }
 .sub{
-    text-align: center;
+    text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
 }
 .subt {
-    text-align: center;
+    text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
 
@@ -50,10 +51,11 @@
 }
 
 .welcome{
-    background-color: rgb(150, 103, 194);
-    border-radius: 50rem;
+    background-color: rgb(120, 167, 255);
+    width: 100% !important; 
+    max-width: 100% !important; 
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    border: 5px double #280a41;
+    border: 3px double #280a41;
 }
 .pro {
     border-radius: 20px;
