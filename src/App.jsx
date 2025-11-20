@@ -1,6 +1,7 @@
+import  React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import NavBar from './components/organisms/Navbar';
-import HomeUser from './pages/HomeUser';
+import NavBar from './components/organism/Navbar.jsx';
+import HomeUser from './pages/HomeUser.jsx';
 
 function App() {
  return (

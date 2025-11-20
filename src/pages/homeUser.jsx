@@ -1,5 +1,5 @@
 import { Container, Row } from 'react-bootstrap';
-import  ProyectCard from '../components/organisms/ProyectCard.jsx';
+import  ProyectCard from '../components/organism/ProyectCard.jsx';
 import Producto from '../Data/Producto.js';
 import '../styles/pages/card.css'
 import '../styles/pages/HomeUser.css'
