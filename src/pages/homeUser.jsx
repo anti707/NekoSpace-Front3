@@ -3,6 +3,7 @@ import  ProyectCard from '../components/organism/ProyectCard.jsx';
 import Producto from '../data/Producto.js';
 import '../styles/card.css'
 import '../styles/HomeUser.css'
+import gatoSpace from '../assets/images/gatoSpace.webp'
 
 
 function HomeUser() {
@@ -11,7 +12,7 @@ function HomeUser() {
   <div className='fondo'>
    <Container className="welcome">
      <h1 className='titulo'>NekoSpace</h1>
-     <p className='sub'>(˶o⩊o˶)</p>
+     <img className='image' src={gatoSpace} alt="nekoSpace" />
      <p className='sub'>¡¡un espacio creado para ti¡¡</p>
      <p className='sub'>donde encontraras todo lo que nececitas o no creias nececitar</p>
      <p className='sub'>⏔⏔⏔ ꒰ ᧔ෆ᧓ ꒱ ⏔⏔⏔ </p>

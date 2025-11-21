@@ -7,33 +7,36 @@
     flex-wrap: wrap !important;
 }
 .fon{
-    background-color: rgb(255, 255, 255);
+    background-image: url('../assets/images/brillos.webp');
+    background-size: contain;
+    background-color: rgb(98, 79, 133)!important;
     padding: 40px;
     flex-wrap: wrap !important;
 }
 
 .titulo{
-    text-align: justify;
+    text-align: center !important;
     font-family: cursive;
     flex-wrap: wrap !important;
-    color: rgb(0, 0, 0);
+    color: rgb(185, 181, 255)!important;
 }
 .titulo2{
     text-align: center;
     font-family: cursive;
     flex-wrap: wrap !important;
-    color: rgb(0, 0, 0);
+    color: rgb(170, 157, 255);
 }
 .text{
-    text-align: justify;
+    text-align: center !important;
     padding: 70px;
     font-family: cursive;
-    flex-wrap: wrap !important;color: rgb(0, 0, 0);
+    flex-wrap: wrap !important;
+    color: rgb(180, 170, 255);
 }
 .sub{
-    text-align: justify;
+    text-align: center !important;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(0, 0, 0);
+    color: rgb(160, 160, 255) !important;
 }
 .subt {
     text-align: justify;
@@ -41,6 +44,7 @@
     padding: 20px;
     font-family: cursive;
     text-align: center;
+    color: rgb(160, 160, 255) !important;
 }
 
 .image{
@@ -58,13 +62,14 @@
 }
 
 .welcome{
-    background-color: rgb(120, 167, 255);
+    background-color: rgb(10, 3, 23);
     width: 100% !important; 
     max-width: 100% !important; 
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     border: 3px double #280a41;
 }
 .pro {
+    background-color: rgb(10, 3, 23);
     border-radius: 20px;
     box-shadow: 0 3px 9px rgba(0,0,0,0.08);
     border: 3px double #280a41;
