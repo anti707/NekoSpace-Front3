@@ -9,7 +9,7 @@
   padding: 1rem;
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
   background-color: rgb(234, 220, 242);
   flex-wrap: wrap !important;
 }
@@ -23,8 +23,8 @@
 }
 .spice {
   display: flex;
-  gap: 70px;
-  justify-content: center;
+  gap: 40px;
+  justify-content: space-evenly;
   padding: 20px;
   margin-bottom: 20px;
   flex-wrap: wrap !important;

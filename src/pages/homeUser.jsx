@@ -21,7 +21,7 @@ function HomeUser() {
   </div>
 
     <div className='fon'>
-      <h2 className='titulo2'>Prdocutos</h2>
+      <h2 className='titulo2'>Productos</h2>
       <Container className='pro'>
         <div>
           <h2 className='subt'>posters</h2>
