@@ -22,6 +22,14 @@ const producto =[
     repoUrl: "https://github.com/anti707/terror"
 
 },
+{
+    id: 4,
+    name : "poster4",
+    descripcion: "poster 40x20 de terror",
+    image: 'https://i.pinimg.com/736x/8b/03/7f/8b037f3c34a0f6ca91b55f15bc41224a.jpg',
+    repoUrl: "https://github.com/anti707/terror"
+
+},
 
 ]
 
