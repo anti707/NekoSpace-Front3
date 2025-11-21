@@ -2,16 +2,15 @@ import { Container, Row } from 'react-bootstrap';
 import  ProyectCard from '../components/organism/ProyectCard.jsx';
 import Producto from '../data/Producto.js';
 import '../styles/card.css'
-import '../styles/HomeUser.css'
+import '../styles/Contacto.css'
 import gatoSpace from '../assets/images/gatoSpace.webp'
 
-
-function login() {
+function Contacto() {
  return (
   <>
   <div className='fondo'>
    <Container className="welcome">
-     <h1 className='titulo'>NekoSession</h1>
+     <h1 className='titulo'>NekoContactos</h1>
      <img className='image' src={gatoSpace} alt="nekoSpace" />
      <p className='sub'>¡¡un espacio creado para ti¡¡</p>
      <p className='sub'>donde encontraras todo lo que nececitas o no creias nececitar</p>
@@ -21,15 +20,9 @@ function login() {
   </div>
 
     <div className='fon'>
-      <h2 className='titulo2'>Productos</h2>
       <Container className='pro'>
         <div>
-          <h2 className='subt'>posters</h2>
-          <div className='spice'>
-            {Array.isArray(Producto) && Producto.map((item) => (<ProyectCard key={item.id}
-            proyect={item} />
-            ))}
-          </div>
+          <h2 className='subt'>Contacto</h2>
         </div> 
       </Container>
     </div>
@@ -40,4 +33,4 @@ function login() {
 }
 
 
-export default login;
+export default Contacto;
