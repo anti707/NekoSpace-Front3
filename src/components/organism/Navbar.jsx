@@ -5,12 +5,13 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 function NavBar() {
  return (
    <Navbar bg="dark" variant="dark" expand="lg">
-     <Container>
-       <Navbar.Brand href="/">Portafolio</Navbar.Brand>
+     <Container className="tirita-neg">
+       <Navbar.Brand href="/">NekoSpace</Navbar.Brand>
        <Navbar.Toggle aria-controls="basic-navbar-nav" />
        <Navbar.Collapse id="basic-navbar-nav">
-         <Nav className="me-auto">
+         <Nav className="me">
            <Nav.Link href="/">Inicio</Nav.Link>
+           <Nav.Link href="/">Iniciar Session</Nav.Link>
          </Nav>
        </Navbar.Collapse>
      </Container>

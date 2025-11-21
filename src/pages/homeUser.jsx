@@ -20,9 +20,10 @@ function HomeUser() {
   </div>
 
     <div className='fon'>
+      <h2 className='titulo2'>Prdocutos</h2>
       <Container className='pro'>
         <div>
-          <h2 className='subt'>productos</h2>
+          <h2 className='subt'>posters</h2>
           <div className='spice'>
             {Array.isArray(Producto) && Producto.map((item) => (<ProyectCard key={item.id}
             proyect={item} />
@@ -35,7 +36,7 @@ function HomeUser() {
     <div className='fon'>
       <Container className='pro'>
         <div>
-          <h2 className='subt'>productos</h2>
+          <h2 className='subt'>Figuritas</h2>
           <div className='spice'>
             {Array.isArray(Producto) && Producto.map((item) => (<ProyectCard key={item.id}
             proyect={item} />

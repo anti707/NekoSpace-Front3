@@ -1,9 +1,8 @@
 import { Container, Row } from 'react-bootstrap';
 import '../styles/card.css'
-import '../styles/HomeAdmin.css'
 
 
-function HomeAdmin() {
+function Homeauth() {
  return (
   <>
   <div className='fondo'>
@@ -23,4 +22,4 @@ function HomeAdmin() {
 }
 
 
-export default HomeAdmin;
+export default Homeauth;
