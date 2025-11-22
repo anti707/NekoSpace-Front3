@@ -76,6 +76,7 @@
     border-radius: 20px;
     box-shadow: 0 3px 9px rgba(0,0,0,0.08);
     border: 3px double #280a41;
+    height: 100% !important;
 }
 .not{
     border-radius: 20px;
