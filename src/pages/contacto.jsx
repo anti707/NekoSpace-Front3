@@ -4,6 +4,7 @@ import Producto from '../data/Producto.js';
 import '../styles/card.css'
 import '../styles/Contacto.css'
 import gatoSpace from '../assets/images/gatoSpace.webp'
+import ContactoForm from '../components/organism/ContactoForm.jsx';
 
 function Contacto() {
  return (
@@ -23,6 +24,7 @@ function Contacto() {
       <Container className='pro'>
         <div>
           <h2 className='subt'>Contacto</h2>
+          <ContactoForm/>
         </div> 
       </Container>
     </div>

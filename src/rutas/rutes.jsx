@@ -4,7 +4,7 @@ import { lazy } from 'react';
 const Home = lazy(() => import('../pages/homeUser'));
 const Login = lazy(() => import('../pages/Login'));
 const CreateUser = lazy(() => import('../pages/create-user'));
-const HomeAdmin = lazy(() => import('../pages/HomeAdmin'));
+const HomeAdmin = lazy(() => import('../pages/homeAdmin'));
 
 // Rutas públicas o del usuario, así están mejor organizadas
 const userRoutes = [
