@@ -1,9 +1,9 @@
 import { Container, Row } from 'react-bootstrap';
-import  ProyectCard from '../components/organism/ProyectCard.jsx';
 import Producto from '../data/Producto.js';
 import '../styles/card.css'
-import '../styles/HomeUser.css'
+import '../styles/login.css'
 import gatoSpace from '../assets/images/gatoSpace.webp'
+import InicioForm from '../components/organism/inicioForm.jsx';
 
 
 function login() {
@@ -21,18 +21,24 @@ function login() {
   </div>
 
     <div className='fon'>
-      <h2 className='titulo2'>Productos</h2>
-      <Container className='pro'>
+      <Container className='pro3'>
         <div>
-          <h2 className='subt'>posters</h2>
-          <div className='spice'>
-            {Array.isArray(Producto) && Producto.map((item) => (<ProyectCard key={item.id}
-            proyect={item} />
-            ))}
-          </div>
+          <h2 className='subt'>Crear Usuario</h2>
+          <InicioForm/>
         </div> 
       </Container>
     </div>
+
+    <div className='fondo'>
+       <Container className="welcome">
+         <h2 className='titulo'>Redes Sociales</h2>
+         <img className='image' src={gatoSpace} alt="nekoSpace" />
+         <p className='sub'>¡¡un espacio creado para ti¡¡</p>
+         <p className='sub'>donde encontraras todo lo que nececitas o no creias nececitar</p>
+         <p className='sub'>⏔⏔⏔ ꒰ ᧔ෆ᧓ ꒱ ⏔⏔⏔ </p>
+       </Container>
+    
+      </div>
 
   </>
  );
