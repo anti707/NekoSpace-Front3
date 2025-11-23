@@ -92,3 +92,28 @@
 .me{
     font-size: medium;
 }
+.imagen{
+    width: 40px;
+    height: 40px;
+}
+.imagenM2{
+    width: 400px;
+    height: 200px;
+    margin-left: 60%;
+    position: absolute;
+    top: 230% !important;
+    border-radius: 10%;
+    border-top: #753ea1;
+}
+.sub2{
+    font-size: o.9rem   !important;
+    font-weight: 500 !important ;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(238, 252, 255);
+}
+.redes{
+    text-align: justify !important;
+    margin-bottom: 1rem;
+    border: 5px double #280a41;
+}
