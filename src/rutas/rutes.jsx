@@ -5,18 +5,28 @@ const Home = lazy(() => import('../pages/homeUser'));
 const Login = lazy(() => import('../pages/Login'));
 const CreateUser = lazy(() => import('../pages/create-user'));
 const HomeAdmin = lazy(() => import('../pages/homeAdmin'));
+const Homeauth = lazy(() => import('../pages/Homeauth'));
+const Contacto = lazy(() => import('../pages/Contacto'));
 
-// Rutas públicas o del usuario, así están mejor organizadas
+// Rutas públicas / usuario
 const userRoutes = [
   { path: '/', element: <Home />, showNavbar: true },
-  { path: '/Login', element: <Login />, showNavbar: false },
+  { path: '/login', element: <Login />, showNavbar: false },
   { path: '/create-user', element: <CreateUser />, showNavbar: false },
+  { path: '/contacto', element: <Contacto />, showNavbar: true },
 ];
 
-// Rutas del administrador 
+// Rutas del administrador
 const adminRoutes = [
-  { path: '/admin/dashboard', element: <HomeAdmin />, isAdmin: true },
+  { path: '/admin/dashboard', element: <HomeAdmin />, isAdmin: true, showNavbar: true },
 ];
 
-// Exportar todas las rutas en un solo arreglo, hell yeah
+// Ruta 404 (fallback)
+const notFoundRoute = {
+  path: '*',
+  element: <div style={{ padding: 24 }}>404 — Página no encontrada</div>,
+  showNavbar: false,
+};
+
+// Exportar arreglo completo de rutas
 export const appRoutes = [...userRoutes, ...adminRoutes, notFoundRoute];

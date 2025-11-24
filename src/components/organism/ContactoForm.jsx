@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FormF from "../molecules/FormF";
 import Button from "../atoms/Button";
+import api from "../Service/api.jsx";
 
 function ContactoForm(){
     const [FormData, setFormData] = useState({
@@ -10,16 +11,38 @@ function ContactoForm(){
         tipoMensaje:"",
         mensaje:""
     });
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState('');
 
     const handleCgange = (e) => {
         const {name, value} = e.target
         setFormData(prevData => ({ ...prevData, [name]: value}));
     };
 
-    const handlesubmit = (e) => {
+    const handlesubmit = async (e) => {
         e.preventDefault();
-        console.log("datos del formulario:", FormData);
-        setFormData({nombre:"", correo:"",numero:"",tipoMensaje:"", mensaje:""});
+        setError('');
+        setSuccess(false);
+        setLoading(true);
+
+        try {
+            const response = await api.post('/contacto', FormData);
+            console.log('Formulario enviado con exito:', response.data);
+            setSuccess(true);
+            setFormData({
+                nombre:"",
+                correo:"",
+                numero:"",
+                tipoMensaje:"",
+                mensaje:""
+            });
+        } catch (error) {
+            console.error('Error al enviar el formulario:', error);
+            setError('Error al enviar el formulario. Por favor, intente de nuevo.');
+        } finally {
+            setLoading(false);
+        }
 
     };
 

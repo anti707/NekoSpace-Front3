@@ -4,10 +4,9 @@ export const table = [
     title: '',
     columns: ['ID', 'Nombre', 'Edad', 'Correo Electrónico'],
     data: [
-      [1, 'Juan Pérez', 28, ''],
-      [2, 'María Gómez', 34, ''],
-      [3, 'Carlos Rodríguez', 22, ''],
-      [4, 'Ana Martínez', 29, ''],
+      [1, 'matheus', 121, ''],
+      [2, 'francisca', 122, ''],
+      [3, 'antonia', 122, ''],
     ],
     className: 'my-4 overflow-x-auto',
   }

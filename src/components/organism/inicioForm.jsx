@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormF from "../molecules/FormF";
 import Button from "../atoms/Button";
 import ButtonL from "../molecules/ButtonL";
+import { AuthProvider } from "../../context/AuthC";
 
 function InicioForm(){
   const [FormData, setFormData] = useState({
@@ -14,13 +15,19 @@ function InicioForm(){
         setFormData(prevData => ({ ...prevData, [name]: value}));
     };
 
-    const handlesubmit = (e) => {
+    const { login } = AuthProvider();
+
+    const handlesubmit = async (e) => {
         e.preventDefault();
         console.log("datos del formulario:", FormData);
         setFormData({correo:"",contraseña:""});
+        try {
+          await login(FormData.correo, FormData.contraseña);
+        } catch (error) {
+          console.error(error.message);
+        }   
 
     };
-
 
     return(
         <form onSubmit={handlesubmit} className="formC">
