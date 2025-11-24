@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import FormF from "../molecules/FormF";
 import Button from "../atoms/Button";
 import ButtonL from "../molecules/ButtonL";
-import { AuthProvider } from "../../context/AuthC";
+import { useAuth } from "../../context/AuthC";
 
 function InicioForm(){
   const [FormData, setFormData] = useState({
@@ -10,19 +10,19 @@ function InicioForm(){
         contraseña:""
     });
 
-    const handleCgange = (e) => {
+    const handleChange = (e) => {
         const {name, value} = e.target
         setFormData(prevData => ({ ...prevData, [name]: value}));
     };
 
-    const { login } = AuthProvider();
+    const { login } = useAuth();
 
-    const handlesubmit = async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("datos del formulario:", FormData);
-        setFormData({correo:"",contraseña:""});
+        const {correo, contraseña} = FormData;
         try {
-          await login(FormData.correo, FormData.contraseña);
+          await login(correo, contraseña);
+          setFormData({ correo: "", contraseña: "" });
         } catch (error) {
           console.error(error.message);
         }   
@@ -30,13 +30,13 @@ function InicioForm(){
     };
 
     return(
-        <form onSubmit={handlesubmit} className="formC">
+        <form onSubmit={handleSubmit} className="formC">
 
             <FormF label="correo" id="correo" type="email" placeholder="ejemplo@gmail.com" value={FormData.correo} onChange={handleCgange} name="correo"/>
-            <FormF label="contraseña" id="contraseña" type="contraseña" placeholder="contraseña" value={FormData.contraseña} onChange={handleCgange} name="contraseña"/>
+            <FormF label="contraseña" id="contraseña" type="password" placeholder="contraseña" value={FormData.contraseña} onChange={handleCgange} name="contraseña"/>
 
             <Button type="submit">Ingresar</Button>
-            <ButtonL to="/login">Registrarse</ButtonL>
+            <ButtonL to="/create-user">Registrarse</ButtonL>
         </form>
 
     );

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://nekospace-1.onrender.com/api/Colaboraciones';
+const BASE_URL = '/api/Colaboraciones';
 
 class ColaboracionesService {
 
