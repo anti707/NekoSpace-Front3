@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import FormF from "../molecules/FormF";
 import Button from "../atoms/Button";
-import { AuthC } from "../../context/AuthC";
-import api from "../../Service/api.jsx";
+import { AuthProvider } from "../../context/AuthC";
 
 function RegistroForm(){
     const [FormData, setFormData] = useState({
@@ -16,12 +15,12 @@ function RegistroForm(){
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
-    const handleChange = (e) => {
+    const handleCgange = (e) => {
         const {name, value} = e.target
         setFormData(prevData => ({ ...prevData, [name]: value}));
     };
 
-    const handleSubmit = async (e) => {
+    const handlesubmit = async (e) => {
         e.preventDefault();
         setError('');
         setLoading(true);
@@ -52,22 +51,23 @@ function RegistroForm(){
         } finally {
             setLoading(false);
         }
-    };
     
 
 
     return(
-        <form onSubmit={handleSubmit} className="formC">
+        <form onSubmit={handlesubmit} className="formC">
 
-            <FormF label="nombre" id="nombre" type="text" placeholder="nombre" value={FormData.nombre} onChange={handleChange} name="nombre"/>
-            <FormF label="correo" id="correo" type="email" placeholder="ejemplo@gmail.com" value={FormData.correo} onChange={handleChange} name="correo"/>
-            <FormF label="numero" id="numero" type="tel" placeholder="000-000-0000" value={FormData.numero} onChange={handleChange} name="numero"/>
-            <FormF label="contraseña" id="contraseña" type="password" placeholder="contraseña" value={FormData.password} onChange={handleChange} name="contraseña" requiered/>
-            <FormF label="confirmarContraseña" id="confirmarContraseña" type="password" placeholder="confirmar Contraseña" value={FormData.confirmPassword} onChange={handleChange} name="confirmarContraseña"/>
+            <FormF label="nombre" id="nombre" type="text" placeholder="nombre" value={FormData.nombre} onChange={handleCgange} name="nombre"/>
+            <FormF label="correo" id="correo" type="email" placeholder="ejemplo@gmail.com" value={FormData.correo} onChange={handleCgange} name="correo"/>
+            <FormF label="numero" id="numero" type="tel" placeholder="000-000-0000" value={FormData.numero} onChange={handleCgange} name="numero"/>
+            <FormF label="contraseña" id="contraseña" type="password" placeholder="contraseña" value={FormData.password} onChange={handleCgange} name="contraseña" requiered/>
+            <FormF label="confirmarContraseña" id="confirmarContraseña" type="password" placeholder="confirmar Contraseña" value={FormData.confirmPassword} onChange={handleCgange} name="confirmarContraseña"/>
 
             <Button type="submit">Enviar</Button>
         </form>
 
     );
 }
+}
+
 export default RegistroForm;

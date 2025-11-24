@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = '/api/Region';
+const BASE_URL = 'https://nekospace-1.onrender.com/api/Region';
 
 class RegionService {
 

@@ -30,13 +30,13 @@ export const AuthProvider = ({ children }) => {
   
   const chekAuth = async () => {
     const token = localStorage.getItem('token');
-    if (!token) {
+    if (token) {
       setLoading(false);
       return;
     }
 
     try {
-      const response = await api.get('/auth/verify', {
+      const response = await api.get('/auth/me', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setUser(response.data.user);
