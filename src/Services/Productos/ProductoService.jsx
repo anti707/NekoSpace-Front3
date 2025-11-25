@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://nekospace-1.onrender.com/api/Productos';
+const BASE_URL = 'https://nekospace-1.onrender.com/api/productos';
 
 class ProductosService {
 
