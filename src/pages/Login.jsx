@@ -24,7 +24,7 @@ function login() {
     <div className='fon'>
       <Container className='pro3'>
         <div>
-          <h2 className='subt'>Crear Usuario</h2>
+          <h2 className='subt'>Iniciar session</h2>
           <InicioForm/>
         </div> 
       </Container>

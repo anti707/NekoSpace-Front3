@@ -1,8 +1,7 @@
 export const UsuarioL = [
   { to: "/", label: "Inicio" },
-  { to: "/about", label: "Nosotros" },
-  { to: "/contact", label: "Contacto" },
   { to: "/Login", label: "Iniciar sesión" },
+  { to: "/contact", label: "Contacto" },
 ];
 
 export default UsuarioL;

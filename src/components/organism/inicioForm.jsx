@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import FormF from "../molecules/FormF";
 import Button from "../atoms/Button";
 import ButtonL from "../molecules/ButtonL";
-import { AuthProvider } from "../../context/AuthC";
+import { AuthProvider, useAuth } from "../../context/AuthC";
 
 function InicioForm(){
   const [FormData, setFormData] = useState({
@@ -15,7 +15,7 @@ function InicioForm(){
         setFormData(prevData => ({ ...prevData, [name]: value}));
     };
 
-    const { login } = AuthProvider();
+    const { login } = useAuth();
 
     const handlesubmit = async (e) => {
         e.preventDefault();
@@ -33,10 +33,10 @@ function InicioForm(){
         <form onSubmit={handlesubmit} className="formC">
 
             <FormF label="correo" id="correo" type="email" placeholder="ejemplo@gmail.com" value={FormData.correo} onChange={handleCgange} name="correo"/>
-            <FormF label="contraseña" id="contraseña" type="contraseña" placeholder="contraseña" value={FormData.contraseña} onChange={handleCgange} name="contraseña"/>
+            <FormF label="contraseña" id="contraseña" type="password" placeholder="contraseña" value={FormData.contraseña} onChange={handleCgange} name="contraseña"/>
 
-            <Button type="submit">Ingresar</Button>
-            <ButtonL to="/login">Registrarse</ButtonL>
+            <Button href="/homeUser">Ingresar</Button>
+            <ButtonL href="/create-user">Registrarse</ButtonL>
         </form>
 
     );

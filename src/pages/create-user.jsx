@@ -1,49 +1,92 @@
-import { Container, Row } from 'react-bootstrap';
-import  ProyectCard from '../components/organism/ProyectCard.jsx';
-import Producto from '../data/Producto.js';
-import '../styles/card.css'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/create.css'
 import '../styles/Contacto.css'
-import gatoSpace from '../assets/images/gatoSpace.webp'
-import RegistroForm from '../components/organism/RegistroForm.jsx';
 
-function Contacto() {
- return (
-  <>
-  <div className='fondo'>
-   <Container className="welcome">
-     <h1 className='titulo'>NekoContactos</h1>
-     <img className='image' src={gatoSpace} alt="nekoSpace" />
-     <p className='sub'>¡¡un espacio creado para ti¡¡</p>
-     <p className='sub'>donde encontraras todo lo que nececitas o no creias nececitar</p>
-     <p className='sub'>⏔⏔⏔ ꒰ ᧔ෆ᧓ ꒱ ⏔⏔⏔ </p>
-   </Container>
+const CreateUser = () => {
+    const [form, setForm] = useState({ nombre:"", correo:"", contrasena:""});
+    const [loading, setLoading] = useState(false);
 
-  </div>
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
 
-    <div className='fon'>
-      <Container className='pro2'>
-        <div>
-          <h2 className='subt'>Crear Usuario</h2>
-          <RegistroForm/>
-        </div> 
-      </Container>
-    </div>
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (!form.correo || !form.contrasena) {
+            console.log('Por favor, complete todos los campos obligatorios.');
+            return;
+        }
 
-    <div className='fondo'>
-       <Container className="welcome">
-         <h1 className='titulo'>NekoSpace</h1>
-         <img className='image' src={gatoSpace} alt="nekoSpace" />
-         <p className='sub'>¡¡un espacio creado para ti¡¡</p>
-         <p className='sub'>donde encontraras todo lo que nececitas o no creias nececitar</p>
-         <p className='sub'>⏔⏔⏔ ꒰ ᧔ෆ᧓ ꒱ ⏔⏔⏔ </p>
-       </Container>
-    
-      </div>
+        setLoading(true);
 
-  </>
- );
+        try {
+            const usuario = {
+                "nombre": form.nombre,
+                "correo": form.correo,
+                "password": form.password,
+                rol: {
+                    "id": 3
+                }
+            }
+            const response = await UserService.createUser(usuario);
 
-}
+            console.log('usuario creado'); 
+        } finally {
+            setLoading(false);
+        }
+    };
 
+    return (
+        <main className="fon4">
+            <form onSubmit={handleSubmit} className="fon-card">
+                <h1 className="text">Crear usuario</h1>
+                
+                <input
+                    type="text"
+                    placeholder="Nombre"
+                    name="nombre"
+                    value={form.nombre}
+                    onChange={handleChange}
+                    required
+                    autoComplete="off"
+                    className="text"
+                />
+                
+                <input
+                    type="email"
+                    placeholder="Correo Electrónico"
+                    name="correo"
+                    value={form.correo}
+                    onChange={handleChange}
+                    required
+                    autoComplete="off"
+                    className="text"
+                />
+                
+                <input
+                    type="password"
+                    placeholder="Contraseña"
+                    name="contrasena"
+                    value={form.contrasena}
+                    onChange={handleChange}
+                    required
+                    autoComplete="current-password"
+                    className="text"
+                />
+                
+                <button
+                    type="submit"
+                    disabled={loading}
+                    className="btn4">{loading ? "Creando..." : "Crear usuario"}
+                </button>
+                
+                <p className="text-center text-lg">
+                    <Link to="/login" className="text">Iniciar session</Link>
+                </p>
+            </form>
+        </main>
+    );
+};
 
-export default Contacto;
+export default CreateUser;   

@@ -1,7 +1,5 @@
 export const adminL = [
-  { to: "/admin/dashboard", label: "Dashboard" },
-  { to: "/admin/users", label: "Usuarios" },
-  { to: "/admin/facciones", label: "Facciones" },
+  { to: "/admin/dashboard", label: "Dashboard" }
 ];
 
 export default adminL;
