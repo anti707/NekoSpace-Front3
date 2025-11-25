@@ -35,7 +35,7 @@ function InicioForm(){
             <FormF label="correo" id="correo" type="email" placeholder="ejemplo@gmail.com" value={FormData.correo} onChange={handleCgange} name="correo"/>
             <FormF label="contraseña" id="contraseña" type="password" placeholder="contraseña" value={FormData.contraseña} onChange={handleCgange} name="contraseña"/>
 
-            <Button href="/homeUser">Ingresar</Button>
+            <Button href="/">Ingresar</Button>
             <ButtonL href="/create-user">Registrarse</ButtonL>
         </form>
 

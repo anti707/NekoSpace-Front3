@@ -40,7 +40,7 @@ const CreateUser = () => {
     return (
         <main className="fon4">
             <form onSubmit={handleSubmit} className="fon-card">
-                <h1 className="text">Crear usuario</h1>
+                <h1 className="text-principal">Crear usuario</h1>
                 
                 <input
                     type="text"
